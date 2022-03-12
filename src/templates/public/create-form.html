@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Create new contact</title>
+    <link rel="stylesheet" href="../../static/css/styles/create-form.css">
+    <!-- GOOGLE FONTs -->
+    <!-- FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body class="body">
+    <p class="title-form">Create New <span>User</span></p>
+    <div class="content-gral">
+        <div class="main-content">
+            <form action="/create-user" method="POST" class="content-form">
+                <fieldset>
+                    <div class="block-form-element">
+                        <legend class="subtitle-form">Create New User</legend>
+                        <!-- ENTRY DATA (INSERT) -->
+                        <div class="block">
+                            <label for="fullname" class="text-label">Fullname</label>
+                            <input class="input-element" type="text" name="fullname" required>
+                        </div>
+                        <div class="block">
+                            <label for="email" class="text-label">Email Address</label>
+                            <input class="input-element" type="email" name="email" required>
+                        </div>
+                        <div class="block">
+                            <label for="phone"class="text-label">Phone Number</label>
+                            <input class="input-element" type="tel" name="phone" required>
+                        </div>
+                        <div class="block">
+                            <label for="country" class="text-label">Country</label>
+                            <input class="input-element" type="text" name="country" required>
+                        </div>
+                        <div class="block block-textarea">
+                            <label for="date" class="text-label">Date</label>
+                            <input class="input-element" type="date" name="date" required>
+                        </div>
+                        <!--  -->
+                        <div class="block block-button">
+                            <input class="button" type="submit" name="actionButton" value="guardar">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <!-- <div class="contact-info">
+                <h4>More Info</h4>
+                <div class="block-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Buenos Aires</p>
+                </div>
+
+                <div class="block-item">
+                    <i class="fas fa-phone"></i>
+                    <p>(011) 1155994477</p>
+                </div>
+
+                <div class="block-item">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <p>contact@website.com</p>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus repellendus?</p>
+                <p>gespy.com</p>
+            </div> -->
+        </div>
+    </div>
+</body></html>

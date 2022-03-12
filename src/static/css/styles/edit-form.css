@@ -1,0 +1,110 @@
+:root {
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --amarillo: #FFC107;
+    --rojo: #CB3234;
+    --verde: #3F888F;
+    --negro: #000000;
+    --gris: #D3D3D3;
+    --grismarino: #666F88;
+    --rojorosado: #FFCDD2;
+    --verdeclaro: #C8E6C9;
+    --amarilloclaro: #FFF0C2;
+    --font-verde: #388E3C;
+    --font-rosado: #C62828;
+    --font-amarrillo: #A68B00;
+    --azul: #1976D2;
+    --azulmate: #3E5F8A;
+    --prueba: #003F5C;
+    --negromate: #232C30;
+    --primary: #181818;
+    --secondary: #3D4449;
+    --terceary: #3282B8;
+}
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+.body {
+    background: var(--primary);
+    color: var(--blanco);
+    line-height: 1.8;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1.5rem;
+}
+
+.content-gral {
+    width: 70%;
+    margin: 4rem auto;
+    /*box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3); */
+    display: grid;
+    grid-template-columns: 2fr;
+    padding: 0;
+}
+
+.block-form-element {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+    margin: 1rem 0;
+}
+
+.title-form {
+    grid-column: 1 / 3;
+    text-align: center;
+    font-weight: bold;
+    font-size: 6rem;
+    padding-bottom: 0.5rem;
+    margin:  2rem 0;
+}
+
+.title-form span {
+    color: var(--verde);
+}
+
+.block {
+    display: block;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    width: auto;
+    margin: 0.5rem 4rem;
+}
+
+.text-label {
+    display: block;
+    font-size: 1.4rem;
+    text-align: start;
+}
+
+.input-element {
+    background: var(--original);
+    border: none;
+    font-size: 1-5rem;
+    border-bottom: 1px solid var(--verde);
+    color: var(--blanco);
+    width: 100%;
+    height: 2rem;
+    padding: 0 0;
+    outline: none;
+}
+
+.block-button {
+    grid-column: 1 / 3;
+}
+
+.button {
+    width: 100%;
+    height: 3rem;
+    background: var(--verde);
+    border: none;
+}
+
+.button:hover {
+    background: var(--rojo);
+    cursor: pointer;
+}

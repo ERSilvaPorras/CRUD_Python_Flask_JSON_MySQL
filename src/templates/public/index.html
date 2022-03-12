@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD USERS</title>
+    <!-- FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles/index.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static',filename='css/img/icon-log.svg')}}" type="image/x-icon">
+</head>
+<body>
+    <main class="conteiner primary-background">
+        <img src="{{url_for('static',filename='css/img/icon-log.svg')}}" width="200px" height="200px">
+    
+        <form class="content-form" action="/" method="POST">
+            <legend class="title-table">Create - Read - Update - Delete</legend>
+            <div class="buttons-block">
+                <!-- BUTTONS -->
+                <a href="/create-user" class="link add-img"></a>  <!-- add -->
+                <input type="submit" name="actionButton"  class="button edit-img" value="editar" width="70px"> <!-- edit -->
+                <input type="submit" name="actionButton" class="button trash-img" value="eliminar"> <!-- trash -->
+                
+                <input type="submit" name="actionButton" class="button share-img" id="share-button" value="compartir"> <!-- share -->
+                <!--<a href="/edit-user" class="link edit-img"></a>--> <!-- edit -->
+                <!--<a href="../../static/json/users.json"  class="link json-img" id="download-link" download></a>  --><!-- download -->
+                <!--<a href="../../static/json/users.pdf"  class="link json-img" id="download-link" download></a>--> <!-- trash -->
+                <!-- END BUTTONS -->
+            </div>
+            <table class="content-table">
+                <thead>
+                    <tr class="heads-columns">
+                        <th><input type="checkbox" id="main-checkbox"></th>
+                        <th>Id</th>
+                        <th>Fullname</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Country</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr class="bodys-columns">
+                        <td class="register-cell"><input type="checkbox" class="user-checkbox" name="op" value="{{user[0]}}"></td>
+                        <td class="register-cell">{{ user[0] }}</td>
+                        <td>{{ user[1] }}</td>
+                        <td>{{ user[2] }}</td>
+                        <td>{{ user[3] }}</td>
+                        <td>{{ user[4] }}</td>
+                        <td>{{ user[5] }}</td>
+                    </tr>
+                    {% endfor %}
+                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="message-error" colspan="7" align="center">{{get_flashed_messages()[0]}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" align="center">
+                            <div class="download-links">
+                                <a href="../../static/json/users.json" class="link json-link" id="json-download" hidden></a>
+                                <a href="../../static/pdf/users.pdf" class="link pdf-link" id="pdf-download" hidden></a>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
+    </main>
+    <script src="../../static/js/logic.js"></script>
+</body>
+</html>
