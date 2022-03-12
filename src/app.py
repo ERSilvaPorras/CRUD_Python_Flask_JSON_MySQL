@@ -2,7 +2,7 @@ from flask import Flask
 from src.routes.routes import *
 app = Flask(__name__)
 # secret_key sessions ------------------------------------------------------------------
-app.config['SECRET_KEY'] = 'the random string'
+# app.config['SECRET_KEY'] = 'the random string'
 # Asociation Routes and Controllers  ---------------------------------------------------
 app.add_url_rule(routes['index_route'], view_func=routes['index_controller'])
 app.add_url_rule(routes['create_route'], view_func=routes['create_controller'])
