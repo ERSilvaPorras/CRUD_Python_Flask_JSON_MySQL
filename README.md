@@ -17,3 +17,6 @@ Funcionalidades a considerar en futuras versiones:
 * Agregar un login y registro para los usuarios
 * Mejorar la interfaz visual de la pagina
 * Agregar Ajax para facilitar ciertas consultas.
+
+Adjunto video de la ejecucion de sus funcionalidades:
+https://drive.google.com/drive/folders/1-eVGPEaiFJYsgz5UMhQToVJaPo5Z2Pm0?usp=sharing
